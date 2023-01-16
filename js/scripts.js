@@ -66,26 +66,7 @@ const team = [
 ];
 
 
-    // Bonus 1
-        // Trasformare la stringa foto in una immagine effettiva
-
-        
-            // Crea elemento img in js
-            let photo = document.createElement('img');
-            photo.setAttribute("src", "img/wayne-barnett-founder-ceo.jpg");
-
-            // Modifica proprietà img in photo
-            workerOne.img = photo;
-            console.log(workerOne.img);
-
-
-            // Lo fa ma trasforma tag img in un object NON nell'immagine effettiva
-
-            const prova = document.getElementById('prova');
-            prova.append(workerOne.img);
-
-
-
+    
 // Milestone 1
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 
@@ -108,6 +89,11 @@ for (let i = 0; i < 6; i++) {
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 for (let i = 0; i < 6; i++) {    
 
+    // prendi proprietà 3 di ogni oggetto
+    console.log(team[i]['img']);
+    // Bonus 1: trasforma stringa in immagine
+    team[i]['img'] = `<img src='img/${team[i]['img']}'>`;
+
     const teamContainer = document.getElementById('team-container');
 
     teamContainer.innerHTML += '------------------------------------------------------------------------------------------------------------';
@@ -127,8 +113,9 @@ for (let i = 0; i < 6; i++) {
 }
 
 
-
-
+// Bonus 1
+        // Trasformare la stringa foto in una immagine effettiva
+        // Fatto
 
 
 
