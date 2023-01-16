@@ -89,22 +89,28 @@ for (let i = 0; i < 6; i++) {
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 for (let i = 0; i < 6; i++) {    
 
+    const teamContainer = document.getElementById('team-container');
+
     // prendi proprietà 3 di ogni oggetto
-    console.log(team[i]['img']);
+    // console.log(team[i]['img']);
+
     // Bonus 1: trasforma stringa in immagine
     team[i]['img'] = `<img src='img/${team[i]['img']}'>`;
 
-    const teamContainer = document.getElementById('team-container');
+    const workerCard = document.createElement('div');
+    workerCard.classList.add('card-flex');
+    teamContainer.append(workerCard);
 
-    teamContainer.innerHTML += '------------------------------------------------------------------------------------------------------------';
+    
     
     // ciclo interno --> per ogni oggetto dell'array
     for (let key in team[i]) {
 
-        const singleWorker = document.createElement('div');
-        singleWorker.innerHTML += (team[i][key]);
+        const singleInfo = document.createElement('div');
+        singleInfo.classList.add('info-style');
+        singleInfo.innerHTML += (team[i][key]);
   
-        teamContainer.append(singleWorker);
+        workerCard.append(singleInfo);
  
     }
 
@@ -117,5 +123,7 @@ for (let i = 0; i < 6; i++) {
         // Trasformare la stringa foto in una immagine effettiva
         // Fatto
 
-
+// BONUS 2:
+// Organizzare i singoli membri in card/schede
+// Fatto
 

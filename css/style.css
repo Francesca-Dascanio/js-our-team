@@ -1,0 +1,39 @@
+/* REGOLE RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* REGOLE GENERALI */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* REGOLE INTESTAZIONE */
+h1 {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* REGOLE TEAM CONTAINER */
+#team-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* REGOLE CARD */
+.card-flex {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border: 1px solid black;
+    width: 50%;
+}
+
+/* REGOLE INFO */
+.info-style {
+    padding: 0.5rem;
+    text-align: center;
+}
