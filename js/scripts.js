@@ -12,6 +12,9 @@ Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e 
 MILESTONE 2:
 Stampare le stesse informazioni su DOM sottoforma di stringhe
 
+BONUS 1:
+Trasformare la stringa foto in una immagine effettiva
+
 */
 
 // Milestone 0
@@ -101,3 +104,9 @@ for (let i = 0; i < 6; i++) {
     }
 
 }
+
+
+// Bonus 1
+// Trasformare la stringa foto in una immagine effettiva
+
+workerOne.img = wayne-barnett-founder-ceo.jpg;
