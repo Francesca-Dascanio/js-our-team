@@ -55,7 +55,6 @@ const workerSix = {
     img: 'barbara-ramos-graphic-designer.jpg'
 }
 
-
 // Creo un array degli oggetti
 const team = [
     workerOne,
@@ -65,6 +64,26 @@ const team = [
     workerFive,
     workerSix
 ];
+
+
+    // Bonus 1
+        // Trasformare la stringa foto in una immagine effettiva
+
+        
+            // Crea elemento img in js
+            let photo = document.createElement('img');
+            photo.setAttribute("src", "img/wayne-barnett-founder-ceo.jpg");
+
+            // Modifica proprietà img in photo
+            workerOne.img = photo;
+            console.log(workerOne.img);
+
+
+            // Lo fa ma trasforma tag img in un object NON nell'immagine effettiva
+
+            const prova = document.getElementById('prova');
+            prova.append(workerOne.img);
+
 
 
 // Milestone 1
@@ -89,9 +108,9 @@ for (let i = 0; i < 6; i++) {
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 for (let i = 0; i < 6; i++) {    
 
-    const divContainer = document.getElementById('team-container');
+    const teamContainer = document.getElementById('team-container');
 
-    divContainer.innerHTML += '------------------------------------------------------------------------------------------------------------';
+    teamContainer.innerHTML += '------------------------------------------------------------------------------------------------------------';
     
     // ciclo interno --> per ogni oggetto dell'array
     for (let key in team[i]) {
@@ -99,14 +118,17 @@ for (let i = 0; i < 6; i++) {
         const singleWorker = document.createElement('div');
         singleWorker.innerHTML += (team[i][key]);
   
-        divContainer.append(singleWorker);
-        
+        teamContainer.append(singleWorker);
+ 
     }
+
+
 
 }
 
 
-// Bonus 1
-// Trasformare la stringa foto in una immagine effettiva
 
-workerOne.img = wayne-barnett-founder-ceo.jpg;
+
+
+
+
